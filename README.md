@@ -8,7 +8,7 @@ This repo contains the code for a static website/application - __this is not the
 
 The goal at this stage is fairly simple. I want to create a user interface that mimics an old-style computer terminal. This interface will provide a platform for a much larger project in the future.
 
-I need to create a sort of terminal emulator using HTML, CSS and JavaScript. The main objective now is to write modules to handle input and output, we need to be able to create a terminal that is divided into a grid of _character cells_ that can be individually rerferenced using line/column co-ordinates (think __ncurses__).
+I need to create a sort of terminal emulator using HTML, CSS and JavaScript. The main objective now is to write modules to handle input and output, we need to be able to create a terminal that is divided into a grid of _character cells_ that can be individually referenced using line/column co-ordinates (think __ncurses__).
 
 Visit https://b0x3n.github.io/front for more information and to view/test the app in its current state.
 
