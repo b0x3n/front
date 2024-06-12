@@ -35,7 +35,7 @@
      * __app.boot() method.
      */
         $(function() { 
-            $('#OuterWrapper').html('Terminal Ready!');
+            $('#OuterWrapper').html('');
         });
     };
 
