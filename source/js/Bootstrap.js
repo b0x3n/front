@@ -4,7 +4,10 @@
  * Here, we import the App.js module, this will import
  * all of the core modules and initialise the system.
  *  
+ * First, import jquery...
  */
+
+    import $ from "jquery";
 
     import App from './App.js';
 
@@ -26,6 +29,14 @@
      * All good, no errors.
      */
         console.log('Ready!');
+
+    /******************************************************
+     * Finally, we initialise jQuery then call the
+     * __app.boot() method.
+     */
+        $(function() { 
+            $('#OuterWrapper').html('Terminal Ready!');
+        });
     };
 
 
