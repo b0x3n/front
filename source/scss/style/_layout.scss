@@ -1,0 +1,27 @@
+/**********************************************************
+ * front/source/scss/_layout.scss
+ *
+ * Main layout for the git pages site.
+ *
+ */
+
+    *,
+    body
+    {
+        margin: 0;
+        padding: 0;
+    
+        box-sizing: border-box;
+    
+        background-color: $bg-color;
+        color: $fg-color;
+    }
+    
+        #OuterWrapper
+        {
+            position: absolute;
+    
+            width: 100%;
+            height: 100%;
+        }
+ 

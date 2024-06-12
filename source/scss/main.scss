@@ -1,3 +1,30 @@
+/**********************************************************
+ * front/source/scss/Main.scss
+ *
+ * To keep things neat and orderly I've divided the scss
+ * files into separate directories:
+ *
+ *      pre/
+ *      style/
+ *      post/
+ *
+ * Each of these directories has an __include.scss file
+ * which will import all other files in that directory.
+ *
+ * The pre/ directory essentially stores files that
+ * define values that are used throughout the application,
+ * for example pre/_fonts.scss defines the core fonts
+ * used in the application.
+ *
+ * The style/ directory stores the regular .scss files
+ * where basic styles elements are defined.
+ *
+ * The post/ directory contains .scss files that should
+ * be compiled last, such as media queries.
+ *
+ */
 
-    @import 'common.scss'
+    @import 'pre/_include.scss';
+    @import 'style/_include.scss';
+    @import 'post/_include.scss';
     
