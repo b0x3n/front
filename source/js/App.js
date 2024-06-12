@@ -1,6 +1,7 @@
-
 /**********************************************************
- * Importing all core modules.
+ * front/source/js/App.js
+ * 
+ * Import all core modules.
  * 
  */
     import Err from './core/Err.js';

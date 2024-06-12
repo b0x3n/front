@@ -1,5 +1,5 @@
 /**********************************************************
- * front/Modules/core/Err.js
+ * front/source/js/core/Err.js
  * 
  * Basic error handler.
  * 

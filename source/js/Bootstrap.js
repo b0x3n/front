@@ -1,5 +1,5 @@
 /**********************************************************
- * front/modules/Bootstrap.js
+ * front/source/js/Bootstrap.js
  *
  * Here, we import the App.js module, this will import
  * all of the core modules and initialise the system.
