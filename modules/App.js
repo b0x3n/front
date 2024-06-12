@@ -1,4 +1,8 @@
 
+/**********************************************************
+ * Importing all core modules.
+ * 
+ */
     import Err from './core/Err.js';
 
 
