@@ -14,3 +14,5 @@ Visit https://b0x3n.github.io/front for more information and to view/test the ap
 
 Once  I'm satisfied that the system works properly I can move onto __phase two__ of the project, more on that later!
 
+Additional - Implemented __sass__ and __jQuery__, everything is set up now - I can finally start writing the code for input and output handling.
+
