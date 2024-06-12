@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./dist/bundle.js && webpack ./modules/Bootstrap.js --output-filename=bundle.js --mode=development"
+    "sass-dev": "sass --watch --update --style=expanded source/scss:dist/",
+    "sass-prod": "sass --no-source-map --style=compressed source/scss:dist/",
+    "build": "rm -rf ./dist/* && npm run sass-prod && webpack ./source/js/Bootstrap.js --output-filename=bundle.js --mode=development"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.77.5",
     "webpack": "^5.92.0",
     "webpack-cli": "^5.1.4"
   }
