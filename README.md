@@ -4,15 +4,17 @@ Update - __13/06/2024__
 
 I've started working on the terminal interface module - it will populate an element with a grid of character cells that can be referenced by co-ordinates.
 
-Compromises needed to be made, since we do not know the width or height of the element the terminal will be created in we need to figure some things out as we go - the user can specify the __font size__ which gives us the __height of a cell__ - we can then use this to calculate the total number of __rows__ we will require.
+Compromises needed to be made. We do not know in advance what the __height__ and __width__ of a character will be nor do we know in advance the dimensions of the element that the terminal will be created in, we need to figure all of that out as we go.
+
+The user can specify the __font size__ which gives us the __height of a character cell__ - we can then use this to calculate the total number of __rows__ we will require for the display.
 
     rows = (terminal_height / font_size)_
 
-Next, we need to populate a cell with a single character in the given font size - from there we can measure the __width of the cell__ to get the width of a monospace character, then we can finally figure out how many __columns__ we need.
+Next, we need to populate a cell with a single character in the given font size - from there we can measure the __width of the cell__ to get the width of a monospace character at the given font size, then we can finally figure out how many __columns__ we require.
 
     columns = (terminal_width / font_width)_
 
-From there we can build the HTML for the display. We simply create a grid of __div__ containers of class __.cell__ ~(see _source/scss/style/_terminal.scss_) and generate unique ID's using the __row__ and __column__ numbers so that __each cell can be referenced individually__.
+From there we can build the HTML for the display. We simply create a grid of __div__ containers of class __.cell__ (see *source/scss/style/_terminal.scss*) and generate unique ID's using the __row__ and __column__ numbers so that __each cell can be referenced individually__.
 
 For example, if our __Terminal__ element is named _"term"_, then ```Terminal.create()``` will generate cells with ID's named like this:
 
