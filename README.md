@@ -23,7 +23,7 @@ For example, if our __Terminal__ element is named _"term"_, then ```Terminal.cre
     term_1_0    // Cell at row 1, column 0.
     term_1_1    // Cell at row 1, column 1.
 
-And so on - if you check the demo at https://b0x3n.github.io/front and view the HTML you'll see what I mean.
+And so on - if you check the demo at https://b0x3n.github.io/front - for now the display is simply populated with __X__'s.
 
 Now I have to work on __keyboard input__, once I have that working I can move on to the next stage of the project!
 
