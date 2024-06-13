@@ -23,7 +23,9 @@ For example, if our __Terminal__ element is named _"term"_, then ```Terminal.cre
     term_1_0    // Cell at row 1, column 0.
     term_1_1    // Cell at row 1, column 1.
 
-And so on - if you check the demo at https://b0x3n.github.io/front - for now the display is simply populated with __X__'s. It is not yet responsive, if you resize the browser then refresh the page it will create a new terminal that adapts to the size of the __Terminal__ HTML element, however, if you resize the window the terminal will not resize, I'll fix this in the next update.
+And so on - if you check the demo at https://b0x3n.github.io/front - for now the display is simply populated with __X__'s.
+
+It is not yet responsive, if you resize the browser then refresh the page it will create a new terminal that adapts to the new display size, however, if you resize the window without a refresh the terminal will not resize, I'll fix this in the next update.
 
 Now I have to work on __keyboard input__, once I have that working I can move on to the next stage of the project!
 
