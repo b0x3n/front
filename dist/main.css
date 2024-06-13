@@ -1,1 +1,1 @@
-*,body{margin:0;padding:0;box-sizing:border-box;background-color:#000;color:#fff}#OuterWrapper{position:absolute;width:100%;height:100%}
+*,body{margin:0;padding:0;box-sizing:border-box;background-color:#000;color:#fff}#OuterWrapper{position:absolute;width:100%;height:100%}#header{position:absolute;top:0px;left:1vw;width:100%;height:5vh;color:#fff;background-color:#000;font-family:"Space Mono",monospace;font-size:5vh}.terminal{position:absolute;top:10vh;left:1vw;width:98vw;height:85vh;border:solid 1px #fff}.cell{position:absolute;width:auto}

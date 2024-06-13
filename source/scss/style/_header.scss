@@ -1,0 +1,19 @@
+/**********************************************************
+ * front/source/scss/style/_header.scss
+ */
+
+    #header
+    {
+        position: absolute;
+
+        top: 0px;
+        left: 1vw;
+        width: 100%;
+        height: 5vh;
+
+        color: $fg-color;
+        background-color: $bg-color;
+
+        font-family: $space-mono-reg;
+        font-size: 5vh;
+    }

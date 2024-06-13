@@ -1,5 +1,31 @@
 # Testbed
 
+Update - __13/06/2024__
+
+I've started working on the terminal interface module - it will populate an element with a grid of character cells that can be referenced by co-ordinates.
+
+Compromises needed to be made, since we do not know the width or height of the element the terminal will be created in we need to figure some things out as we go - the user can specify the __font size__ which gives us the __height of a cell__ - we can then use this to calculate the total number of __rows__ we will require.
+
+    rows = (terminal_height / font_size)_
+
+Next, we need to populate a cell with a single character in the given font size - from there we can measure the __width of the cell__ to get the width of a monospace character, then we can finally figure out how many __columns__ we need.
+
+    columns = (terminal_width / font_width)_
+
+From there we can build the HTML for the display. We simply create a grid of __div__ containers of class __.cell__ ~(see _source/scss/style/_terminal.scss_) and generate unique ID's using the __row__ and __column__ numbers so that __each cell can be referenced individually__.
+
+For example, if our __Terminal__ element is named _"term"_, then ```Terminal.create()``` will generate cells with ID's named like this:
+
+    term_0_0    // Cell at row 0, column 0.
+    term_0_1    // Cell at row 0, column 1.
+    term_1_0    // Cell at row 1, column 0.
+    term_1_1    // Cell at row 1, column 1.
+
+And so on - if you check the demo at https://b0x3n.github.io/front and view the HTML you'll see what I mean.
+
+Now I have to work on __keyboard input__, once I have that working I can move on to the next stage of the project!
+
+
 Update - __12/06/2024__
 
 The project started today, I just created this repo and pushed the skeleton demo app on git pages.

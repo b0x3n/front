@@ -7,12 +7,16 @@
  * First, import jquery...
  */
 
-    import $ from "jquery";
+    import $ from 'jquery';
+    // export for others scripts to use
+    window.$ = $;
+    //window.jQuery = jQuery;
 
     import App from './App.js';
 
     let     Main = () =>
     {
+
         let     app = App();
 
     /******************************************************
@@ -34,10 +38,10 @@
      * Finally, we initialise jQuery then call the
      * __app.boot() method.
      */
-        $(function() { 
-            $('#OuterWrapper').html('');
-        });
+        app.boot();
+            
     };
 
-
-    Main();
+    $(function() {
+        Main();
+    });

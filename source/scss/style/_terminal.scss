@@ -1,0 +1,23 @@
+/**********************************************************
+ * front/source/scss/style/_terminal.scss
+ */
+
+    .terminal
+    {
+        position: absolute;
+
+        top: 10vh;
+        left: 1vw;
+        width: 98vw;
+        height: 85vh;
+
+        border: solid 1px #FFF;
+    }
+
+        .cell
+        {
+            position: absolute;
+
+            width: auto;
+        }
+

@@ -4,18 +4,31 @@
  * Import all core modules.
  * 
  */
-    import Err from './core/Err.js';
+    import Err          from './core/Err.js';
+    import Terminal     from './core/Terminal.js';
 
 
     const   App = () =>
     {
 
         let     __err;
+        let     __terminal;
 
 
         let     __init = () =>
         {
             __err = Err();
+
+            __terminal = Terminal(__err);
+        };
+
+
+        let     _boot = () =>
+        {
+            __terminal.create("Terminal");
+
+            if (__err.isError())
+                return false;
         };
 
 
@@ -23,7 +36,9 @@
 
 
         return {
-            isErr:              __err.isError
+            isErr:              __err.isError,
+
+            boot:               _boot
         };
 
     };
