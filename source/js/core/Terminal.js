@@ -64,23 +64,26 @@
 
         let     __generageCells = () =>
         {
-            __rows = Math.floor(__height / __fontHeight);
+            let diffY = (__height / __fontHeight);
+            __rows = Math.floor(diffY);
+
+            diffY -= __rows;
 
     /******************************************************
      * We need to populate a single cell with a single
      * character then grab the width of the cell...
      */
-            $(`#${__el}`).append(`<div class="cell" id="TestCell" style="line-height: ${__fontHeight}px; font-size: ${__fontHeight}px;">W</div>`);
+
+            $(`#${__el}`).append(`
+                <div class="cell" id="TestCell" style="font-size: ${__fontHeight}px;">W</div>
+            `);
 
             __fontWidth = parseInt($(`#TestCell`).css('width').replace('px', ''));
 
-            $(`#${__el}`).append(`<br />Font width: ${__fontWidth} px<br />`);
+            let diffX = (__width / __fontWidth);
+            __cols = Math.floor(diffX);
 
-            __cols = Math.floor(__width / __fontWidth);
-
-            $(`#${__el}`).append(`
-                Rows: ${__rows}<br />Cols: ${__cols}
-            `);
+            diffX -= __cols;
 
             __html = '';
 
@@ -93,8 +96,8 @@
                             class="cell"
                             id="${__el}_${row}_${col}"
                             style="
-                                top: ${__fontHeight * row}px;
-                                left: ${__fontWidth * col}px;
+                                top: ${__fontHeight * (row + (diffY / 2))}px;
+                                left: ${__fontWidth * (col + (diffX / 2))}px;
                                 width: ${__fontWidth}px;
                                 height: ${__fontHeight}px;
                             "
@@ -106,6 +109,7 @@
             }
 
             $(`#${__el}`).html(__html);
+            $(`#${__el}_${__rows - 1}_${__cols - 1}`).html('W');
         };
 
 
@@ -142,8 +146,9 @@
             __width = parseInt($(`#${__el}`).css('width').replace('px', ''));
             __height = parseInt($(`#${__el}`).css('height').replace('px', ''));
             
-            $(`#${__el}`).append(`Terminal width: ${__width} px<br>Terminal height: ${__height} px`);
-
+    /******************************************************
+     * __generateCells() will populate 
+     */
             __generageCells();
 
             return true;

@@ -1,0 +1,15 @@
+/**********************************************************
+ * front/source/scss/pre/_animations.scss
+ *
+ */
+
+    @keyframes terminalFlicker
+    {
+        0% {
+            opacity: 0.99;
+        }
+
+        90% {
+            opacity: 0.98;
+        }
+    }

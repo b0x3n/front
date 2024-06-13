@@ -1,5 +1,16 @@
 # Testbed
 
+Update 2 - __13/06/2024__
+
+Fixed the __resize__ issue, the terminal is now responsive - if you resize the browser it will create a new grid of __character cells__.
+
+This means it completely rebuilds the HTML and re-populates the terminal element, so it will re-calculate the number of __rows__ and __columns__.
+
+I also added a new __terminal-flicker__ class that adds a simple __CSS__ animation, all it does is rapidly and subtly flip-flop the terminal opacity between _.99_ and _.98_ to create a slight __flickering effect__.
+
+This is purely for my own personal amusement, makes it more retro!
+
+
 Update - __13/06/2024__
 
 I've started working on the terminal interface module - it will populate an element with a grid of character cells that can be referenced by co-ordinates.

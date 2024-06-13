@@ -25,6 +25,10 @@
 
         let     _boot = () =>
         {
+            $(window).on('resize', () => {
+                __terminal.create('Terminal');
+            });
+
             __terminal.create("Terminal");
 
             if (__err.isError())
